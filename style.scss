@@ -30,11 +30,9 @@ $transition: 0.3s;
     font-style: normal;
 }
 
-main{
+main {
     overflow: hidden;
 }
-
-
 
 .container {
     max-width: 1240px;
@@ -43,8 +41,8 @@ main{
 body {
     margin: 0;
     padding: 0;
-    font-family: "Neue Machina" , sans-serif;
-    
+    font-family: "Neue Machina", sans-serif;
+
     font-weight: 400;
 }
 h1,
@@ -116,7 +114,7 @@ nav {
     margin-left: 79px;
     top: -50px;
     left: 0px;
-    &::before{
+    &::before {
         position: absolute;
         content: url(./assets/img/header1.png);
         top: -203px;
@@ -201,7 +199,7 @@ h2 {
 header {
     padding-bottom: 372px;
     position: relative;
-    &::after{
+    &::after {
         content: url(./assets/img/header2.png);
         position: absolute;
         right: 0;
@@ -225,7 +223,7 @@ header {
     flex-direction: column;
     padding-left: 115px;
     gap: 20px;
-    &.element-animation{
+    &.element-animation {
         transform: translate(-100px, 0);
     }
     &:not(:last-child) {
@@ -310,15 +308,14 @@ header {
     font-weight: 400;
     font-size: 22px;
     line-height: 25px;
-    a{
+    a {
         text-decoration: none;
         display: inline-block;
-        &:hover{
+        &:hover {
             transform: scale(1.05);
         }
     }
-    
-    
+
     &:not(:last-child) {
         &::after {
             content: "|";
@@ -326,13 +323,12 @@ header {
         }
     }
 }
-#reddish{
-    a{
-        &:hover{
+#reddish {
+    a {
+        &:hover {
             transform: scale(1);
             color: #000000;
         }
-
     }
 }
 @keyframes text {
@@ -527,8 +523,8 @@ footer {
     letter-spacing: 0.04em;
     color: #a1aec6;
     text-decoration: underline;
-    a{
-        &:hover{
+    a {
+        &:hover {
             display: inline-block;
             transform: scale(1.05);
         }
@@ -569,78 +565,78 @@ footer {
     top: 0;
     right: 0;
 }
-a{
+a {
     transition: $transition;
-    &:hover{
+    &:hover {
         transform: scale(1.05);
         color: $blue-color;
     }
 }
-@media screen and (max-width: 1300px){
-    nav{
+@media screen and (max-width: 1300px) {
+    nav {
         margin-bottom: 220px;
     }
-    .container{
+    .container {
         max-width: 1140px;
     }
-    .header__ux{
+    .header__ux {
         font-size: 64px;
         top: -15px;
         left: 49px;
     }
-    header{
+    header {
         padding-bottom: 300px;
-        &::after{
+        &::after {
             bottom: -270px;
         }
     }
-    h1{
+    h1 {
         font-size: 84px;
     }
-    .header__quote{
+    .header__quote {
         font-size: 52px;
         margin-top: 250px;
     }
-    .process{
+    .process {
         margin-bottom: 260px;
     }
-    .about__locations{
+    .about__locations {
         margin-top: 52px;
     }
-    .about-locations__list{
+    .about-locations__list {
         gap: 16px;
     }
     .about__item:not(:last-child)::after {
         content: "|";
         padding-left: 16px;
     }
-    .about__item{
+    .about__item {
         font-size: 18px;
     }
-    .about__text{
+    .about__text {
         font-size: 20px;
     }
-    .about__img{
-        img{
+    .about__img {
+        img {
             width: 350px;
         }
     }
-    .about__wrapper{
+    .about__wrapper {
         gap: 75px;
     }
-    .about__quote{
+    .about__quote {
         max-width: 95%;
         margin-left: unset;
     }
-    .ticker{
+    .ticker {
         margin: 280px 0;
     }
-    .projects__img{
-        img{
+    .projects__img {
+        img {
             max-width: 400px;
         }
     }
-    .projects__item{
+    .projects__item {
         height: auto;
         display: flex;
         flex-direction: column;
@@ -658,26 +654,25 @@ a{
                 justify-content: center;
                 padding-right: 11px;
                 padding-left: 11px;
-
             }
         }
     }
-    .projects__text{
+    .projects__text {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: max-content;
         flex: 1 0 auto;
     }
-    footer{
+    footer {
         margin-top: 0;
-        h2{
+        h2 {
             text-align: unset;
             margin-left: auto;
             max-width: 72%;
         }
     }
-    h2{
+    h2 {
         font-size: 52px;
     }
 }
@@ -685,19 +680,214 @@ a{
     .container {
         max-width: 960px;
     }
-    h1{
+    h1 {
         left: 92px;
     }
-    .header__descr{
+    .header__descr {
         right: 0;
     }
-    .header__ux{
+    .header__ux {
         left: 0;
     }
 }
 @media screen and (max-width: 992px) {
+    a{
+        &:hover{
+            transform: scale(1) !important;
+        }
+    }
+    img{
+        &:hover{
+            transform: scale(1) !important;
+        }
+    }
     .container {
-        max-width: 720px;
+        max-width: 700px;
+    }
+    .nav__menu {
+        gap: 53px;
+    }
+    nav {
+        margin-bottom: 76px;
+    }
+    .hello-img {
+        max-width: 86px;
+        top: 0;
+        right: 0%;
+        #hello {
+            width: 100%;
+        }
+        #hand {
+            width: 33px;
+        }
+    }
+    .header__ux {
+        font-size: 64px;
+        line-height: 63px;
+        top: 30px;
+    }
+    h1 {
+        font-size: 66px;
+        line-height: 64px;
+        top: 50px;
+        left: 38%;
+    }
+    .header__descr {
+        font-size: 15px;
+        line-height: 20px;
+        right: 0;
+        top: 35px;
+        max-width: 273px;
+    }
+    .header__quote {
+        font-size: 48px;
+        line-height: 59px;
+    }
+    header {
+        padding-bottom: 250px;
+        &::after{
+            top: auto;
+            right: 0;
+            left: 0;
+            bottom: -90px;
+    width: 100%;
+    content: "";
+    background: url(./assets/img/header2.png) no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+        }
+    }
+    h2 {
+        font-size: 42px;
+    }
+    .process__list {
+        margin-top: 72px;
+        gap: 64px;
+    }
+    .process__item {
+        gap: 18px;
+        padding-left: 83px;
+        h3 {
+            font-size: 34px;
+        }
+        &::before {
+            font-size: 34px;
+        }
+        p {
+            font-size: 15px;
+            line-height: 20px;
+        }
+    }
+    .process__item:not(:last-child)::after {
+        bottom: -32px;
+    }
+    .process {
+        margin-bottom: 202px;
+    }
+    .about__wrapper {
+        align-items: flex-start;
+    }
+    .about__content {
+        h2 {
+            margin-bottom: 42px;
+        }
+    }
+    .about__text {
+        font-size: 18px;
+        line-height: 24px;
+        gap: 28px;
+    }
+    .about__locations {
+        margin-top: 42px;
+    }
+    .about__img {
+        img {
+            width: 218px;
+        }
+    }
+    .about-locations__list {
+        flex-direction: column;
+    }
+    .about__item:not(:last-child)::after {
+        display: none;
+    }
+    .about__quote {
+        margin-top: 122px;
+        font-size: 32px;
+        line-height: 48px;
+    }
+    .ticker {
+        margin: 250px 0;
+        font-size: 116px;
+    }
+    .projects {
+        h2 {
+            margin-bottom: 47px;
+        }
+    }
+    .projects__type {
+        font-size: 14px;
+        line-height: 27px;
+        span {
+            padding: 4px 12px;
+        }
+    }
+    .projects__img {
+        img {
+            max-width: 100%;
+        }
+    }
+    .projects__wrapper {
+        column-gap: 24px;
+        row-gap: 47px;
+    }
+    .projects__name {
+        flex: 1 0 auto;
+        font-size: 18px;
+        line-height: 17px;
+    }
+    .projects__descr {
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .projects__links {
+        font-size: 15px;
+        line-height: 30px;
+        gap: 24px;
+        margin-top: 24px;
+    }
+    .projects__link {
+        gap: 10px;
+    }
+    footer {
+        padding-top: 196px;
+        h2 {
+            margin-bottom: 26px;
+        }
+    }
+    .footer__wrapper{
+        padding-bottom: 78px;
+        
+    }
+    .footer__links {
+        font-size: 22px;
+        line-height: 27px;
+        margin-top: 115px;
+        margin-bottom: 84px;
+    }
+    .footer__want {
+        font-size: 26px;
+        line-height: 25px;
+    }
+    .footer__social{
+        gap: 62px;
+        margin-right: 47px;
+        font-size: 28px;
+line-height: 27px;
+
+    }
+    .arrow-up{
+        top: -15px;
     }
 }
 @media screen and (max-width: 760px) {
