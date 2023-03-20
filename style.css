@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+#mobile {
+  display: none;
+}
+
 @font-face {
   font-family: "Neue Machina";
   src: url(./assets/fonts/NeueMachina-Ultrabold.woff2) format("woff2");
@@ -279,7 +283,8 @@ header::after {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 132px;
+  -moz-column-gap: 132px;
+       column-gap: 132px;
 }
 
 .about__img {
@@ -893,6 +898,164 @@ a:hover {
 @media screen and (max-width: 760px) {
   .container {
     max-width: 540px;
+  }
+  .header__wrapper {
+    display: block;
+  }
+  nav {
+    margin-bottom: 59px;
+  }
+  .nav__menu {
+    gap: 23px;
+  }
+  .header__ux {
+    top: 88px;
+    left: 0;
+    right: 0;
+    margin: 0;
+  }
+  .header__ux::before {
+    display: none;
+  }
+  h1 {
+    top: 100px;
+    left: 0;
+    margin-top: 56px;
+  }
+  .header__descr {
+    top: 110px;
+    margin-top: 60px;
+  }
+  .header__quote {
+    margin-top: 165px;
+    font-size: 32px;
+    line-height: 40px;
+  }
+  header {
+    padding-bottom: 178px;
+  }
+  header::after {
+    background-size: 100% 75%;
+    height: 100%;
+    background-position: 0 100%;
+  }
+  h2 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .process {
+    margin-bottom: 116px;
+  }
+  .process__list {
+    margin-top: 66px;
+  }
+  .process__item {
+    padding-left: 55px;
+  }
+  .process__item h3 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .process__item::before {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .about__wrapper {
+    display: grid;
+    grid-template-areas: "b a" "c c";
+    gap: 0;
+    -moz-column-gap: 27px;
+         column-gap: 27px;
+    row-gap: 31px;
+  }
+  #mobile {
+    display: block;
+    grid-area: b;
+    align-self: self-end;
+  }
+  .about__img {
+    grid-area: a;
+  }
+  .about__img img {
+    width: 139px;
+  }
+  .about__content {
+    grid-area: c;
+  }
+  .about__content h2 {
+    display: none;
+  }
+  .about__text {
+    gap: 24px;
+    font-size: 16px;
+    line-height: 23px;
+  }
+  .about__text strong {
+    font-weight: 800;
+  }
+  .about__locations {
+    margin-top: 30px;
+  }
+  .about__locations h5 {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .about-locations__list {
+    gap: 12px;
+  }
+  .about__item {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .about__quote {
+    margin-top: 103px;
+    max-width: unset;
+  }
+  .ticker {
+    font-size: 96px;
+    margin: 190px 0;
+  }
+  .projects__wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 62px;
+  }
+  footer {
+    padding-top: 174px;
+  }
+  footer h2 {
+    font-size: 34px;
+    line-height: 42px;
+    max-width: unset;
+  }
+  .footer__want {
+    font-size: 24px;
+    line-height: 23px;
+  }
+  .footer__links {
+    font-size: 22px;
+    line-height: 27px;
+    flex-wrap: wrap;
+    justify-content: unset;
+    gap: 22px;
+  }
+  .footer__social {
+    flex-direction: column;
+    align-items: unset;
+    justify-content: unset;
+    gap: 42px;
+  }
+  .arrow-up {
+    bottom: 66px;
+    top: auto;
+  }
+  .about__quote {
+    font-size: 29px;
+    line-height: 40px;
+  }
+  footer {
+    background: url(./assets/img/footer-mobile.png) no-repeat;
+    background-position: left bottom;
+    background-size: contain;
   }
 }
 @media screen and (max-width: 576px) {
