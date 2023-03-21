@@ -91,6 +91,7 @@ nav {
 
 .nav__link {
   text-decoration: none;
+  display: inline-block;
   font-weight: 400;
   font-size: 18px;
   line-height: 17px;
@@ -243,6 +244,7 @@ header::after {
   flex-direction: column;
   padding-left: 115px;
   gap: 20px;
+  max-width: 85%;
 }
 .process__item.element-animation {
   transform: translate(-100px, 0);
@@ -597,7 +599,26 @@ a:hover {
   color: #000aff;
 }
 
+.about__quote br {
+  display: none;
+}
+
+.process__item br {
+  display: none;
+}
+
+.about__text br {
+  display: none;
+}
+
+#br {
+  display: unset;
+}
+
 @media screen and (max-width: 1300px) {
+  #br {
+    display: none;
+  }
   nav {
     margin-bottom: 220px;
   }
@@ -707,8 +728,14 @@ a:hover {
   .header__ux {
     left: 0;
   }
+  .about__text br:first-child {
+    display: unset;
+  }
 }
 @media screen and (max-width: 992px) {
+  .about__text br {
+    display: none;
+  }
   a:hover {
     transform: scale(1) !important;
   }
@@ -779,6 +806,7 @@ a:hover {
     gap: 64px;
   }
   .process__item {
+    max-width: unset;
     gap: 18px;
     padding-left: 83px;
   }
@@ -894,8 +922,14 @@ a:hover {
   .arrow-up {
     top: -15px;
   }
+  br {
+    display: none !important;
+  }
 }
 @media screen and (max-width: 760px) {
+  br {
+    display: unset;
+  }
   .container {
     max-width: 540px;
   }
@@ -967,6 +1001,7 @@ a:hover {
     -moz-column-gap: 27px;
          column-gap: 27px;
     row-gap: 31px;
+    grid-template-columns: auto 1fr;
   }
   #mobile {
     display: block;
@@ -989,9 +1024,6 @@ a:hover {
     gap: 24px;
     font-size: 16px;
     line-height: 23px;
-  }
-  .about__text strong {
-    font-weight: 800;
   }
   .about__locations {
     margin-top: 30px;
@@ -1062,5 +1094,29 @@ a:hover {
   .container {
     max-width: 100%;
     padding: 0 15px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .about__quote br {
+    display: unset;
+  }
+  .process__item br {
+    display: unset;
+  }
+  .about__text br {
+    display: unset;
+  }
+  .about__text p:first-child > br:nth-child(1) {
+    display: none;
+  }
+  #netology {
+    display: unset !important;
+  }
+  .about__wrapper {
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  .about__img {
+    justify-self: center;
   }
 }/*# sourceMappingURL=style.css.map */

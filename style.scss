@@ -87,6 +87,7 @@ nav {
 }
 .nav__link {
     text-decoration: none;
+    display: inline-block;
     font-weight: 400;
     font-size: 18px;
     line-height: 17px;
@@ -225,6 +226,7 @@ header {
     flex-direction: column;
     padding-left: 115px;
     gap: 20px;
+    max-width: 85%;
     &.element-animation {
         transform: translate(-100px, 0);
     }
@@ -574,7 +576,28 @@ a {
         color: $blue-color;
     }
 }
+.about__quote{
+    br{
+        display: none;
+    }
+}
+.process__item {
+    br{
+        display: none;
+    }
+}
+.about__text{
+    br{
+        display: none;
+    }
+}
+#br{
+    display: unset;
+}
 @media screen and (max-width: 1300px) {
+    #br{
+        display: none;
+    }
     nav {
         margin-bottom: 220px;
     }
@@ -691,8 +714,19 @@ a {
     .header__ux {
         left: 0;
     }
+    .about__text{
+        br:first-child{
+            display: unset;
+        }
+    }
 }
 @media screen and (max-width: 992px) {
+    
+    .about__text{
+        br{
+            display: none;
+        }
+    }
     a {
         &:hover {
             transform: scale(1) !important;
@@ -767,6 +801,7 @@ a {
         gap: 64px;
     }
     .process__item {
+        max-width: unset;
         gap: 18px;
         padding-left: 83px;
         h3 {
@@ -889,8 +924,14 @@ a {
     .arrow-up {
         top: -15px;
     }
+    br{
+        display: none !important;
+    }
 }
 @media screen and (max-width: 760px) {
+    br{
+        display: unset;
+    }
     .container {
         max-width: 540px;
     }
@@ -963,11 +1004,13 @@ a {
         gap: 0;
         column-gap: 27px;
         row-gap: 31px;
+        grid-template-columns: auto 1fr;
     }
     #mobile {
         display: block;
         grid-area: b;
         align-self: self-end;
+    
     }
     .about__img {
         grid-area: a;
@@ -985,9 +1028,7 @@ a {
         gap: 24px;
         font-size: 16px;
         line-height: 23px;
-        strong {
-            font-weight: 800;
-        }
+        
     }
     .about__locations {
         margin-top: 30px;
@@ -1054,9 +1095,43 @@ a {
         background-size: contain;
     }
 }
+
 @media screen and (max-width: 576px) {
     .container {
         max-width: 100%;
         padding: 0 15px;
+    }
+}
+@media screen and (max-width: 420px){
+    .about__quote{
+        br{
+            display: unset;
+        }
+    }
+    .process__item {
+        br{
+            display: unset;
+        }
+    }
+    .about__text{
+        br{
+            display: unset;
+        }
+        p:first-child{
+            &>br:nth-child(1){
+                display: none;
+            }
+            
+            
+        }
+    }
+    #netology{
+        display: unset !important;
+    }
+    .about__wrapper{
+        column-gap: 10px;
+    }
+    .about__img{
+        justify-self: center;
     }
 }

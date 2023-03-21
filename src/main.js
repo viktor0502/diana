@@ -2,7 +2,7 @@ var $ = require("jquery");
 require("jquery.marquee");
 
 $('.marquee').marquee({
-	duration: 10000,
+	duration: 8000,
 	gap: 50,
 	delayBeforeStart: 0,
 	direction: 'left',
@@ -40,3 +40,7 @@ function onEntry(entry) {
     }
   }
   smoothScrolling('scroll')
+
+  
+
+  
