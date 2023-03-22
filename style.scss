@@ -1105,7 +1105,7 @@ a {
 @media screen and (max-width: 420px){
     .about__quote{
         br{
-            display: unset;
+            display: unset !important;
         }
     }
     .process__item {
